@@ -1,10 +1,23 @@
 /*eslint-env browser*/
 
-var inventory = [[number,"product",quantity,cost],];
+
+
+var product1 = [2233, "Hat", 12,14.99];
+var product2 = [3223, "Socks",36, 9.99];
+var product3 = [4824, "Shirt", 10, 15.99];
+var product4 = [6343, "Jeans", 22, 39.99];
+var product5 = [9382, "Jacket", 5, 49.99];
+var inventory = [product1,product2, product3,product4, product5];
+/*	[[number, "product",quantity,cost],];
 	sku (number), product (string), quantity (number), and cost (floating point number)
 
-[[2233, "Hat", 12,14.99], [3223, "Socks",36, 9.99], [4824, "Shirt", 10, $15.99], [6343, "Jeans", 22, 39.99], [9382, "Jacket", 5, 49.99] ]
-var inv[["sku", 2233, "hat", 12, 14.99], []]
+var inventory1 =[[ [2233, "Hat", 12,14.99], [3223, "Socks",36, 9.99], [4824, "Shirt", 10, $15.99], [6343, "Jeans", 22, 39.99], [9382, "Jacket", 5, 49.99] ]];*/
+
+window.console.log(inventory);
+
+var product1 = [inventory[1]]
+
+//Order Layout inventory [0][2]
 
 function display_menu() {
     "use strict";
@@ -17,8 +30,8 @@ function display_menu() {
     window.console.log("");
 }
 function view(employee_list) {
-   inventory = inventory.join(" ");
-	window.console.log(inventory);
+   inventory = inventory.join(",");
+	window.console.log("The inventory list is as follows:" + inventory);
 }
 function update() {
  "use strict";
