@@ -22,15 +22,15 @@ function display_menu() {
 function view(inventory) {
 	"use strict";
 	inventory = inventory.sort();
-	for (var i = 0; i < inventory.length; i += 1) {
-
-		window.console.log(inventory[i][0] + " " + inventory[i][1] + " " + inventory[i][2] + " "  + inventory[i][3] + "\n");
-		}
+	var storage;
+	if (inventory.length > 0) {
+		for (var i = 0; i < inventory.length; i += 1) {
+			window.console.log(inventory[i][0] + " " + inventory[i][1] + " " + inventory[i][2] + " "  + inventory[i][3] + "\n");
+		} }else {storage = localStorage.getItem("array") || " ";
+	}
 }
 
 function update(inventory) {
-	/*If the user selects the update command, a prompt should appear that allows the user to enter a sku number. Once the user enters a correct sku number a second prompt should appear that allows the user to enter a new stock quantity. The quantity should then update the product of the sku number entered.
-*/
 	"use strict";
 	var skuNumber = Number(window.prompt("Please enter a sku number"));
 	var stockQuantity = window.prompt("Please enter the stock quantity");
@@ -38,6 +38,7 @@ function update(inventory) {
 	switch (skuNumber) {
 	case 2233:
 		inventory[0][2] = stockQuantity;
+		break;
 	case 3223:
 		inventory[1][2] =  stockQuantity;
 		break;
@@ -54,7 +55,9 @@ function update(inventory) {
 		window.alert("That Sku number does not exist!");
 		window.console.log("Invalid Sku Number Entered!");
 	}
+	localStorage.array = inventory;
 	
+//	WEB STORAGE PUSH GOES HERE
 }
 	
 function main() {
@@ -66,15 +69,14 @@ function main() {
 	var product3 = [4824, "Shirt", 10, 15.99];
 	var product4 = [6343, "Jeans", 22, 39.99];
 	var product5 = [9382, "Jacket", 5, 49.99];
-	var inventory = [product1,product2, product3,product4, product5];
-
-  	var command;
-    
+	var inventory = [product1, product2, product3, product4, product5];
+    var command;
     display_menu();
-  
+  	
     
     while (true) {
         command = window.prompt("Enter command");
+		
         if (command !== null) {
             if (command === "view") {
                 view(inventory);
@@ -91,5 +93,6 @@ function main() {
     }
     window.console.log("Program terminated.");
 }
+	
 main();
 
