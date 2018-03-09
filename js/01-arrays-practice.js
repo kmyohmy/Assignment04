@@ -1,6 +1,7 @@
 /*//STEP 1
 var favoriteMovies = ["Movie", "Movie2", "Movie3", "Movie4"];
 window.console.log(favoriteMovies[1]);
+
 //STEP 2
 var movies = new Array(5);
 movies[0] = "Movie1";
@@ -21,9 +22,27 @@ moviesLiteral.push("Movie3");
 moviesLiteral.push("Movie4");
 moviesLiteral.push("Movie5");
 moviesLiteral.push("Movie6");
-moviesLiteral.shift();
-window.console.log(moviesLiteral.join(" "));
+
+window.console.log(moviesLiteral.length);
+
 //STEP 4
+var moviesLiteral = [];
+var i;
+moviesLiteral.push("Movie1");
+moviesLiteral.push("Movie2");
+moviesLiteral.push("Movie3");
+moviesLiteral.push("Movie4");
+moviesLiteral.push("Movie5");
+moviesLiteral.push("Movie6");
+
+moviesLiteral.shift();
+window.console.log(moviesLiteral);
+
+//window.console.log(moviesLiteral.join(" //"));
+
+
+
+//STEP 5
 var moviesLiteral = [];
 var i;
 moviesLiteral.push("Movie1");
@@ -34,27 +53,10 @@ moviesLiteral.push("Movie5");
 moviesLiteral.push("Movie6");
 moviesLiteral.push("Movie7");
 
-
 for (i = 0; i <= moviesLiteral.length; i += 1) {
 	window.console.log(moviesLiteral[i]);
 	
 }
-
-
-//STEP 5
-var moviesLiteral = [];
-moviesLiteral.push("Movie1");
-moviesLiteral.push("Movie2");
-moviesLiteral.push("Movie3");
-moviesLiteral.push("Movie4");
-moviesLiteral.push("Movie5");
-moviesLiteral.push("Movie6");
-moviesLiteral.push("Movie7");
-
-for (var i in moviesLiteral) {
-	window.console.log(moviesLiteral[i]);
-}
-
 
 //STEP 6
 var moviesLiteral = [];
@@ -67,8 +69,10 @@ moviesLiteral.push("Movie6");
 moviesLiteral.push("Movie7");
 
 for (var i in moviesLiteral) {
-	window.console.log(moviesLiteral.sort());
+	window.console.log(moviesLiteral[i]);
 }
+
+
 //STEP 7
 var moviesLiteral = [];
 moviesLiteral.push("Movie1");
@@ -78,13 +82,12 @@ moviesLiteral.push("Movie4");
 moviesLiteral.push("Movie5");
 moviesLiteral.push("Movie6");
 moviesLiteral.push("Movie7");
+moviesLiteral = moviesLiteral.sort();
+
 
 for (var i in moviesLiteral) {
 	window.console.log(moviesLiteral[i]);
 }
-
-
-
 
 
 //STEP 8
@@ -151,30 +154,59 @@ var leastFavoriteMovies = ["leastFav1","leastFav2","leastFav3","leastFav4"];
 window.console.log("Movies I like: \n\n" + moviesLiteral.join("\n") + " \n " + "\nMovies I regret watching: \n\n" + leastFavoriteMovies.join("\n"));
 
 var reverseSort = moviesLiteral.concat(leastFavoriteMovies);
-reverseSort = reverseSort.shift();
-window.console.log(reverseSort);
+
+window.console.log(reverseSort.pop());
 
 
 //STEP 11
+var moviesLiteral = [];
+moviesLiteral.push("Movie1");
+moviesLiteral.push("Movie2");
+moviesLiteral.push("Movie3");
+moviesLiteral.push("Movie4");
+moviesLiteral.push("Movie5");
+moviesLiteral.push("Movie6");
+moviesLiteral.push("Movie7");
+
+
+for (var i in moviesLiteral) {
+	window.console.log(moviesLiteral[i]);
+}
+var leastFavoriteMovies = ["leastFav1","leastFav2","leastFav3","leastFav4"];
+
+window.console.log("Movies I like: \n\n" + moviesLiteral.join("\n") + " \n " + "\nMovies I regret watching: \n\n" + leastFavoriteMovies.join("\n"));
+
+var reverseSort = moviesLiteral.concat(leastFavoriteMovies);
+window.console.log(reverseSort.shift());
+
+
 
 //STEP 12
-var employee1 = [];
-var employee2 = [];
-var employees = [];
-employee1["id"] = "DC981";
-employee1["name"] = "John Flicker";
-employee1["position"] = "Janitor";
-employee1["department"] = "Custodial";
-employee1["isEmployed"] = true;
-employee2["id"] = "AB892";
-employee2["name"] = "Ladaveon Johnson";
-employee2["position"] = "Manager";
-employee2["department"] = "Human Resources";
-employee2["isEmployed"] = true;
+var moviesLiteral = [];
+moviesLiteral.push("Movie1");
+moviesLiteral.push("Movie2");
+moviesLiteral.push("Movie3");
+moviesLiteral.push("Movie4");
+moviesLiteral.push("Movie5");
+moviesLiteral.push("Movie6");
+moviesLiteral.push("Movie7");
 
-employees.push(employee1);
-employees.push(employee2);
-window.console.log(employees[1]["id"]);
+var i;
+
+for (var i in moviesLiteral) {
+	window.console.log(moviesLiteral[i]);
+}
+var leastFavoriteMovies = ["leastFav1","leastFav2","leastFav3","leastFav4"];
+
+var reverseSort = moviesLiteral.concat(leastFavoriteMovies);
+
+    reverseSort = reverseSort.sort();
+   
+		for(var i in leastFavoriteMovies){
+			leastFavoriteMovies.indexOf(i) = window.prompt("What's a movie you like?");
+   }
+
+  window.console.log(movies);
 
 //STEP 13
 var employee1 = [];
@@ -195,6 +227,7 @@ employees.push(employee1);
 employees.push(employee2);
 window.console.log(employees[1]["id"]);
 
+
 //STEP 14
 
 var employee1 = [];
@@ -210,19 +243,20 @@ employee2["name"] = "Ladaveon Johnson";
 employee2["position"] = "Manager";
 employee2["department"] = "Human Resources";
 employee2["isEmployed"] = true;
+employees = [employee1, employee2];
 
-employees.push(employee1);
-employees.push(employee2);
-
+window.console.log(employees);
 var i;
-for (i = 0; i < employees; i++) {
-	if (employees[i]["names"] === true){
-		 window.console.log(employees[i]["name"]);
-	} 
-	else{
+for (i = 0; i < employees.length; i += 1) {
+	
+	window.console.log(employees[i]["name"]);
+
 }
 
+
+
 //STEP 15
+
 var employee1 = [];
 var employee2 = [];
 var employee3 = [];
@@ -238,26 +272,27 @@ employee2["position"] = "Manager";
 employee2["department"] = "Human Resources";
 employee2["isEmployed"] = true;
 
-employee3["id"] = "AB892";
-employee3["name"] = "Ladaveon Johnson";
-employee3["position"] = "Manager";
-employee3["department"] = "Human Resources";
+
+
+employee3["id"] = "RB832";
+employee3["name"] = "Jamon Johnson";
+employee3["position"] = "Security";
+employee3["department"] = "Accounting";
 employee3["isEmployed"] = false;
-employees.push(employee1);
-employees.push(employee2);
-employees.push(employee3);
+employees = [employee1, employee2, employee3];
 window.console.log(employees);
 var i;
+
 for (i = 0; i < employees.length; i += 1) {
-  if (employees[i]["currentEmployee"] === false) {
-          window.console.log(employees[i]["name"] + " is not employeed")
-} else {
-        window.console.log(employees[i]["id"]);
-          window.console.log(employees[i]["name"]);
-          window.console.log(employees[i]["title"]);
-          window.console.log(employees[i]["department"]);
-           window.console.log(employees[i]["currentEmployee"]);  }
-}
+ 
+if (employees[i]["isEmployed"] == true) {
+
+	window.console.log(employees[i]["name"]);
+			}
+	}
+	
+
+
 //STEP 16
 var movies = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", 3], ["Movie 4", 4], ["Movie 5", 5]];
 var movieNameOnly = movies.filter(function (item) {
@@ -317,4 +352,5 @@ function largestOfFour(arr) {
  }
  return largestNumber;
 }
+
 */
